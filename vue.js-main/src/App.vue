@@ -2,12 +2,14 @@
 <template>
     <Sidebar />
     <div class="chart-row">
-        <Chart  />
-        <Chart  />
-        <Chart  />
+        <Chart />
+        <Chart />
+        <Chart />
+        <Chart />
+        <Chart />
     </div>
-    
-    
+
+
 </template>
 
 <script>
@@ -28,6 +30,6 @@ export default {
     flex-direction: row;
     flex:0 0 auto;
     
-justify-content: space-between;
+
 }
 </style>

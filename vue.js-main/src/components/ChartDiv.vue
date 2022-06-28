@@ -30,9 +30,7 @@ export default defineComponent({
   components: {
     VChart
   },
-  provide: {
-    [THEME_KEY]: "dark"
-  },
+
   setup () {
     const option = ref({
       title: {
@@ -46,14 +44,20 @@ export default defineComponent({
       legend: {
         orient: "vertical",
         left: "left",
+        show: false,
         data: ["Direct", "Email", "Ad Networks", "Video Ads", "Search Engines"]
       },
       series: [
         {
           name: "Traffic Sources",
           type: "pie",
-          radius: "55%",
-          center: ["50%", "60%"],
+          radius: ['35%', '65%'],
+          avoidLabelOverlap: false,
+          label: {
+            show: false,
+            position: 'center'
+          },
+          center: ["40%", "50%"],
           data: [
             { value: 335, name: "Direct" },
             { value: 310, name: "Email" },
@@ -61,12 +65,16 @@ export default defineComponent({
             { value: 135, name: "Video Ads" },
             { value: 1548, name: "Search Engines" }
           ],
+          labelLine: {
+            show: false
+          },
           emphasis: {
             itemStyle: {
               shadowBlur: 10,
               shadowOffsetX: 0,
               shadowColor: "rgba(0, 0, 0, 0.5)"
-            }
+            },
+
           }
         }
       ]
@@ -81,22 +89,29 @@ export default defineComponent({
 <style scoped>
 
 .chart-more {
-    align-self: right;
+position: absolute;
+  bottom: 0;
+  right: 0;
+  margin-left: 5px;
+  margin-bottom: 6px;
+  margin-right: 9px;
 }
+
 .chart-container {
-    border: 1px solid #7e8d99;
+  border: 1px solid #fcfdfd;
     display: flex;
     flex-direction: column;
     border-radius: 14px;
-    margin: 25px; 
+    margin: 25px;
+  position: relative;
     height: auto;
-  width: auto;
+  width: 17%;
+    box-shadow: 10px 0px 27px -5px rgb(0 0 0 / 30%);
   flex:0 0 auto;
 }
 .chart {
-  height: 400px;
-  width: 400px;
-  align-self:stretch
-}
+  height: 20vh;
+    width: auto
+  }
 
 </style>
