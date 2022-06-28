@@ -1,7 +1,7 @@
 <template>
     <div class="chart-container">
         <v-chart class="chart" :option="option" />
-        <p class="chart-more"> Show more </p>
+        <button class="chart-more" v-on:click='showLego =! showLego' @click='al'> Show more </button>
     </div>
 </template>
 
@@ -15,7 +15,7 @@ import {
   LegendComponent
 } from "echarts/components";
 import VChart, { THEME_KEY } from "vue-echarts";
-import { ref, defineComponent } from "vue";
+import { ref, defineComponent, toRef} from "vue";
 
 use([
   CanvasRenderer,
@@ -26,13 +26,36 @@ use([
 ]);
 
 export default defineComponent({
+  
   name: "HelloWorld",
   components: {
     VChart
   },
-
-  setup () {
-    const option = ref({
+ props:{
+    showLeg:  {
+            type: Boolean,
+            default: false,
+        },
+    
+  },
+  data(){
+    return {
+      showLego:false
+    }
+  },
+  
+  created() {
+        this.showLego = this.showLeg
+    },
+  methods:{
+    al:function(){
+      this.option.legend.show =! this.option.legend.show
+      console.log(this.option.legend.show)
+    }
+  },
+  computed: {
+    option() {
+      return {
       title: {
         text: "Traffic Sources",
         left: "center"
@@ -44,7 +67,7 @@ export default defineComponent({
       legend: {
         orient: "vertical",
         left: "left",
-        show: false,
+        show: this.showLego,
         data: ["Direct", "Email", "Ad Networks", "Video Ads", "Search Engines"]
       },
       series: [
@@ -78,10 +101,11 @@ export default defineComponent({
           }
         }
       ]
-    });
+    }}},
+    
+   
 
-    return { option };
-  }
+    
 });
 </script>
 
@@ -95,6 +119,12 @@ position: absolute;
   margin-left: 5px;
   margin-bottom: 6px;
   margin-right: 9px;
+  background: none;
+  border: none;
+  color: #686868;
+}
+.chart-more:hover {
+  color:#512abd
 }
 
 .chart-container {
