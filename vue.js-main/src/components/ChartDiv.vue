@@ -145,8 +145,8 @@ export default defineComponent({
     margin: 25px;
     position: relative;
     height: auto;
-    width: 17%;
-    box-shadow: 10px 0px 27px -5px rgb(0 0 0 / 30%);
+    width: 16.5%;
+      box-shadow: 0px 0px 15px -5px rgb(0 0 0 / 30%);
     flex: 0 0 auto;
   }
   

@@ -114,7 +114,7 @@ export default {
         //! Styles
         bgColor: {
             type: String,
-            default: '#b0c4ff',
+            default: '#8a6bb7',
         },
         secondaryColor: {
             type: String,
@@ -122,32 +122,32 @@ export default {
         },
         homeSectionColor: {
             type: String,
-            default: '#e4e9f7',
+            default: '#5ed6ae',
         },
         logoTitleColor: {
             type: String,
-            default: '#232c40',
+            default: '#f6ecff',
         },
         iconsColor: {
             type: String,
-            default: '#232c40',
+            default: '#45127e',
         },
         itemsTooltipColor: {
             type: String,
-            default: '#e4e9f7',
+            default: '#a2fad7',
         },
 
         menuItemsHoverColor: {
             type: String,
-            default: '#232c40',
+            default: '#45127e',
         },
         menuItemsTextColor: {
             type: String,
-            default: '#232c40',
+            default: '#45127e',
         },
         menuFooterTextColor: {
             type: String,
-            default: '#232c40',
+            default: '#45127e',
         },
     },
     data() {
@@ -209,7 +209,7 @@ body {
     flex-direction: column;
     position: fixed;
     left: 0;
-    box-shadow: 10px 0px 27px -5px rgb(0 0 0 / 30%);
+    box-shadow: 6px 0px 7px -5px rgba(0, 0, 0, 0.349);
     top: 0;
     height: 100%;
     min-height: min-content;
@@ -226,6 +226,7 @@ body {
 }
 
 .sidebar .logo-details {
+    color: var(--logo-title-color);
     height: 60px;
     display: flex;
     align-items: center;
@@ -233,6 +234,7 @@ body {
 }
 
 .sidebar .logo-details .icon {
+    color: var(--logo-title-color);
     opacity: 0;
     transition: all 0.5s ease;
 }
@@ -251,6 +253,7 @@ body {
 }
 
 .sidebar .logo-details #btn {
+    color: var(--logo-title-color);
     position: absolute;
     top: 50%;
     right: 0;
@@ -287,8 +290,7 @@ body {
     position: relative;
     margin: 20px 0;
     list-style: none;
-    border: 1px solid #a6bac9;
-    border-radius: 14px
+        border-radius: 24px
 }
 
 .sidebar li .tooltip {
@@ -297,7 +299,6 @@ body {
     left: calc(100% + 15px);
     z-index: 3;
     background: var(--items-tooltip-color);
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
     padding: 6px 12px;
     border-radius: 4px;
     font-size: 15px;
@@ -345,9 +346,8 @@ body {
     display: flex;
     height: 100%;
     width: 100%;
-    border-radius: 12px;
+    border-radius: 24px;
     align-items: center;
-    box-shadow: 0px 2px 5px rgb(0 0 0 / 30%);
     background: #f5f8fb !important;
     text-decoration: none;
     transition: all 0.4s ease;
@@ -355,7 +355,7 @@ body {
 }
 
 .sidebar li a:hover {
-    background: var(--menu-items-hover-color);
+    background: var(--menu-items-hover-color) !important;
 }
 
 .sidebar li a .links_name {
@@ -376,7 +376,7 @@ body {
 .sidebar li a:hover .links_name,
 .sidebar li a:hover i {
     transition: all 0.5s ease;
-    color: var(--bg-color);
+    color: var(--logo-title-color);
 }
 
 .sidebar li i {
