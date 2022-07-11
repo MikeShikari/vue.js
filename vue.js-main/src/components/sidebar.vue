@@ -39,7 +39,7 @@ export default {
         //! Menu settings
         isMenuOpen: {
             type: Boolean,
-            default: true,
+            default: false,
         },
         menuTitle: {
             type: String,
@@ -76,14 +76,14 @@ export default {
                     icon: 'bx-grid-alt',
                 },
                 {
-                    link: '#',
+                    link: 'test_runner',
                     name: 'Test runner',
                     tooltip: 'Test runner',
                     icon: 'bxs-flask',
                 },
 
                 {
-                    link: '#',
+                    link: 'docs',
                     name: 'Docs',
                     tooltip: 'Docs',
                     icon: 'bx-file',
@@ -95,7 +95,7 @@ export default {
                     icon: 'bx-pie-chart-alt-2',
                 },
                 {
-                    link: '#',
+                    link: 'files',
                     name: 'File Manager',
                     tooltip: 'Files',
                     icon: 'bx-folder',
@@ -103,7 +103,7 @@ export default {
 
 
                 {
-                    link: '#',
+                    link: 'settings',
                     name: 'Setting',
                     tooltip: 'Setting',
                     icon: 'bx-cog',
@@ -114,7 +114,7 @@ export default {
         //! Styles
         bgColor: {
             type: String,
-            default: '#8a6bb7',
+            default: '#192A39',
         },
         secondaryColor: {
             type: String,
@@ -122,15 +122,15 @@ export default {
         },
         homeSectionColor: {
             type: String,
-            default: '#5ed6ae',
+            default: '#5ed6ca',
         },
         logoTitleColor: {
             type: String,
-            default: '#f6ecff',
+            default: '#00B59E',
         },
         iconsColor: {
             type: String,
-            default: '#45127e',
+            default: '#192A39',
         },
         itemsTooltipColor: {
             type: String,
@@ -139,20 +139,20 @@ export default {
 
         menuItemsHoverColor: {
             type: String,
-            default: '#45127e',
+            default: '#127e7e',
         },
         menuItemsTextColor: {
             type: String,
-            default: '#45127e',
+            default: '#192A39',
         },
         menuFooterTextColor: {
             type: String,
-            default: '#45127e',
+            default: '#127e7e',
         },
     },
     data() {
         return {
-            isOpened: false
+            isOpened: true
         }
     },
     mounted() {
@@ -196,6 +196,7 @@ export default {
 
 body {
     transition: all 0.5s ease;
+    background: #e9e9e9
 }
 
 .menu-logo {
@@ -346,9 +347,10 @@ body {
     display: flex;
     height: 100%;
     width: 100%;
-    border-radius: 24px;
+    border-radius: 25px;
+        margin-bottom: 25px;
     align-items: center;
-    background: #f5f8fb !important;
+    background: #00B59E !important;
     text-decoration: none;
     transition: all 0.4s ease;
     background: var(--bg-color);

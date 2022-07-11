@@ -1,16 +1,17 @@
 /* eslint-disable */
 <template>
     <Sidebar />
+    <div>
+        <Line title='Errors' v-bind:results='resARRAY' :legend='catarr' />
+    </div>
     <div class="chart-row">
         <Chart title='API' v-bind:results='resAPI' :legend='[resAPI[0].name, resAPI[1].name, resAPI[2].name]' />
         <Chart title='UI Firefox' v-bind:results='resUIFF' :legend='[resAPI[0].name, resAPI[1].name, resAPI[2].name]' />
         <Chart title='UI Chrome' v-bind:results='resUIC' :legend='[resAPI[0].name, resAPI[1].name, resAPI[2].name]' />
         <Chart title='Total' v-bind:results='resT' :legend='[resAPI[0].name, resAPI[1].name, resAPI[2].name]' />
-        <Chart title='Duration' v-bind:results='resD' :legend='[resD[0].name, resD[1].name, resD[2].name]' />
+        <!-- <Chart title='Duration' v-bind:results='resD' :legend='[resD[0].name, resD[1].name, resD[2].name]' /> -->
     </div>
-    <div>
-        <Line />
-    </div>
+
 
 
 </template>
@@ -30,8 +31,8 @@ export default {
                 { value: 100, name: "flaky", itemStyle: { color: '#e4b562' } },
             ],
             resUIFF: [
-                { value: 3000, name: "passed", itemStyle: { color: '#76d999' } },
-                { value: 200, name: "failed", itemStyle: { color: '#eb3d4e' } },
+                { value: 300, name: "passed", itemStyle: { color: '#76d999' } },
+                { value: 2000, name: "failed", itemStyle: { color: '#eb3d4e' } },
                 { value: 123, name: "flaky", itemStyle: { color: '#e4b562' } },
             ],
             resUIC: [
