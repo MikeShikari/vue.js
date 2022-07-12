@@ -53,6 +53,14 @@ export default defineComponent({
         const data = ref(props.results);
         const options = ref({
             responsive: true,
+            // tooltips: {
+            //     callbacks: {
+            //         afterLabel: function(tooltipItem, data) {
+            //             var dataset = data.value[0];
+            //             var percent = Math.round((dataset['data'][tooltipItem['index']] / dataset["_meta"][0]['total']) * 100)
+            //             return '(' + percent + '%)';}
+            //     } 
+            //     },
             scales: {
                 y: {
                     grid: {
@@ -97,18 +105,18 @@ export default defineComponent({
                     tension: 0.5,
                     fill: {
                         target: 'origin',
-                        above: 'rgba(149, 100, 204, 0.3)'
+                        above: 'rgba(149, 100, 204, 0.07)'
                     }
                     // backgroundColor: ['#77CEFF', '#0079AF', '#123E6B'],
                 },
                 {
                     label: 'Chrome',
                     data: data.value[0],
-                    borderColor: 'rgb(162, 196, 250)',
+                    borderColor: 'rgb(58, 181, 157)',
                     tension: 0.5,
                     fill: {
                         target: 'origin',
-                        above: 'rgba(162, 196, 250, 0.3)'
+                        above: 'rgba(58, 181, 157, 0.07)'
                     }
                     // backgroundColor: ['#77CEFF', '#0079AF', '#123E6B'],
                 },
@@ -119,7 +127,7 @@ export default defineComponent({
                     tension: 0.5,
                     fill: {
                         target: 'origin',
-                        above: 'rgba(243, 91, 45, 0.3)'
+                        above: 'rgba(243, 91, 45, 0.07)'
                     }
                     // backgroundColor: ['#77CEFF', '#0079AF', '#123E6B'],
                 },

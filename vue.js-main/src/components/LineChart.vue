@@ -97,18 +97,18 @@ export default defineComponent({
                     tension: 0.5,
                     fill: {
                         target: 'origin',
-                        above: 'rgba(149, 100, 204, 0.3)'
+                        above: 'rgba(149, 100, 204, 0.07)'
                     }
                     // backgroundColor: ['#77CEFF', '#0079AF', '#123E6B'],
                 },
                 {
                     label: 'Chrome',
                     data: data.value[0],
-                    borderColor: 'rgb(162, 196, 250)',
+                    borderColor: '#3ab59d',
                     tension: 0.5,
                     fill: {
                         target: 'origin',
-                        above: 'rgba(162, 196, 250, 0.3)'
+                        above: 'rgba(58, 181, 157, 0.07)'
                     }
                     // backgroundColor: ['#77CEFF', '#0079AF', '#123E6B'],
                 },
@@ -119,7 +119,7 @@ export default defineComponent({
                     tension: 0.5,
                     fill: {
                         target: 'origin',
-                        above: 'rgba(243, 91, 45, 0.3)'
+                        above: 'rgba(243, 91, 45, 0.07)'
                     }
                     // backgroundColor: ['#77CEFF', '#0079AF', '#123E6B'],
                 },
