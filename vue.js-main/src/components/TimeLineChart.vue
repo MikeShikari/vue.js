@@ -158,15 +158,15 @@ export default defineComponent({
     margin: 25px;
     position: relative;
     height: auto;
-    max-width: 100%;
+    max-width: 75%;
     box-shadow: 0px 0px 15px -5px rgb(0 0 0 / 30%);
     flex: 1 1 0px;
-        ;
+    ;
     transition: all 1s ease;
 }
 
 .chart {
-    height: 30vh;
+    height: 24vh;
     width: auto;
     margin-bottom: 20px;
     margin-top: 20px;
@@ -180,16 +180,17 @@ export default defineComponent({
     width: auto;
     transition: all 1s ease;
 }
+
 .icon {
     font-size: 25px;
     font-weight: 500;
     transition: all 0.5s ease;
 }
+
 .icon_more {
     font-size: 25px;
     font-weight: 500;
     transition: all 0.5s ease;
     transform: rotate(180deg)
 }
-
 </style>

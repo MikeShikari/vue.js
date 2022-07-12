@@ -148,6 +148,7 @@ export default defineComponent({
     width: 16.5%;
     box-shadow: 0px 0px 15px -5px rgb(0 0 0 / 30%);
     flex: 0 0 auto;
+        ;
 }
 
 .chart {

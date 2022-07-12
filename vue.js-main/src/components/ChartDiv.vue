@@ -55,7 +55,6 @@ export default defineComponent({
     const doughnutRef = ref();
     const leg = ref({
       showLego: false,
-      center: ["40%", "50%"],
       isActive: true
     })
     const data = ref(props.results);
@@ -133,12 +132,13 @@ export default defineComponent({
   background: #fcfdfd;
   flex-direction: column;
     border-radius: 14px;
-    margin: 25px;
+    margin: auto;
     position: relative;
     height: auto;
-    width: 15%;
+    max-width: 15%;
     box-shadow: 0px 0px 15px -5px rgb(0 0 0 / 30%);
-    flex: 0 0 auto;
+    flex: 1 1 0px;
+      ;
   }
   
     .chart {
