@@ -1,7 +1,7 @@
 /* eslint-disable */
 <template>
     <Sidebar />
-
+    <RunForm />
 
 
 
@@ -10,10 +10,11 @@
 
 <script>
 import Sidebar from '@/components/sidebar.vue'
+import RunForm from '@/components/FormToRun.vue'
 
 export default {
     name: 'component.vue',
-    components: { Sidebar },
+    components: { Sidebar, RunForm },
 }
 </script>
 
