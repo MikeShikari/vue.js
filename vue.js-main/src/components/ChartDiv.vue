@@ -60,6 +60,7 @@ export default defineComponent({
     const data = ref(props.results);
     const options = ref({
       responsive: true,
+
       plugins: {
         legend: {
           display: leg.value.showLego,
@@ -71,6 +72,9 @@ export default defineComponent({
             text: `${((props.results[0].value / (props.results[0].value + props.results[1].value + props.results[2].value)) * 100).toFixed(2)}%`
           }
         },
+
+
+
         title: {
           display: true,
           text: props.title,
@@ -98,7 +102,9 @@ export default defineComponent({
       datasets: [
         {
           data: data.value,
-          backgroundColor: ['#00B59E', '#D95252', '#FEAF64'],
+          backgroundColor: ['rgb(98, 167, 245)', '#D95252', '#FEAF64'],
+          borderColor: '#ffffff',
+          borderWidth: 0
         },
       ],
     }));

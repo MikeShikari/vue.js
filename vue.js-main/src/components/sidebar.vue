@@ -126,7 +126,7 @@ export default {
         },
         logoTitleColor: {
             type: String,
-            default: '#00B59E',
+            default: 'rgb(98, 167, 245)',
         },
         iconsColor: {
             type: String,
@@ -139,7 +139,7 @@ export default {
 
         menuItemsHoverColor: {
             type: String,
-            default: '#127e7e',
+            default: 'rgb(59, 102, 150)',
         },
         menuItemsTextColor: {
             type: String,
@@ -350,7 +350,7 @@ body {
     border-radius: 25px;
         margin-bottom: 25px;
     align-items: center;
-    background: #00B59E !important;
+    background: rgb(98, 167, 245) !important;
     text-decoration: none;
     transition: all 0.4s ease;
     background: var(--bg-color);

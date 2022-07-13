@@ -64,7 +64,7 @@ export default defineComponent({
 }
 
 .chart-more:hover {
-    color: #512abd
+    color: rgb(98, 167, 245)
 }
 
 .option-picker {
@@ -107,13 +107,13 @@ export default defineComponent({
 .allure {
     color: rgb(255, 255, 255);
     font-weight: 600;
-    border: 2px solid rgb(151 204 100);
+    border: 2px solid rgb(98, 167, 245);
     /* border-color: rgb(247 234 100 / 80%); */
-    background-color: rgb(151 204 100);
+    background-color: rgb(98, 167, 245);
 }
 
 .allure:hover {
-    box-shadow: 0px 0px 15px -5px rgb(151 204 100);
+    box-shadow: 0px 0px 15px -5px rgb(98, 167, 245);
     transition: all 0.5s ease;
 }
 

@@ -101,33 +101,33 @@ export default defineComponent({
                 {
                     label: 'API',
                     data: data.value[2],
-                    borderColor: 'rgb(149, 100, 204)',
+                    borderColor: 'rgba(54, 95, 186, 73)',
                     tension: 0.5,
                     fill: {
                         target: 'origin',
-                        above: 'rgba(149, 100, 204, 0.07)'
+                        above: 'rgba(54, 95, 186, 0.07)'
                     }
                     // backgroundColor: ['#77CEFF', '#0079AF', '#123E6B'],
                 },
                 {
                     label: 'Chrome',
                     data: data.value[0],
-                    borderColor: 'rgb(58, 181, 157)',
+                    borderColor: 'rgb(98, 167, 245)',
                     tension: 0.5,
                     fill: {
                         target: 'origin',
-                        above: 'rgba(58, 181, 157, 0.07)'
+                        above: 'rgba(98, 167, 245, 0.07)'
                     }
                     // backgroundColor: ['#77CEFF', '#0079AF', '#123E6B'],
                 },
                 {
                     label: 'Firefox',
                     data: data.value[1],
-                    borderColor: 'rgb(243, 91, 45)',
+                    borderColor: 'rgba(81, 232, 202, 91)',
                     tension: 0.5,
                     fill: {
                         target: 'origin',
-                        above: 'rgba(243, 91, 45, 0.07)'
+                        above: 'rgba(81, 232, 202, 0.05)'
                     }
                     // backgroundColor: ['#77CEFF', '#0079AF', '#123E6B'],
                 },
