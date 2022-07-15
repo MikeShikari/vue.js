@@ -123,7 +123,7 @@ export default defineComponent({
                 {
                     label: 'Firefox',
                     data: data.value[1],
-                    borderColor: 'rgba(81, 232, 202, 91)',
+                    borderColor: 'rgba(68, 184, 160, 72)',
                     tension: 0.5,
                     fill: {
                         target: 'origin',

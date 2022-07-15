@@ -65,7 +65,7 @@ export default defineComponent({
             datasets: [
                 {
                     data: data.value,
-                    backgroundColor: ['rgba(54, 95, 186, 73)', 'rgb(98, 167, 245)', 'rgba(81, 232, 202, 91)']
+                    backgroundColor: ['rgba(54, 95, 186, 73)', 'rgb(98, 167, 245)', 'rgba(68, 184, 160, 72)']
 
                     // backgroundColor: ['#77CEFF', '#0079AF', '#123E6B'],
                 },

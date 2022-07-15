@@ -2,6 +2,7 @@
 <template>
     <Sidebar />
     <RunForm />
+    <!-- <radial_progress /> -->
 
 
 
@@ -11,10 +12,11 @@
 <script>
 import Sidebar from '@/components/sidebar.vue'
 import RunForm from '@/components/FormToRun.vue'
+import radial_progress from '@/components/progress.vue'
 
 export default {
     name: 'component.vue',
-    components: { Sidebar, RunForm },
+    components: { Sidebar, RunForm, radial_progress },
 }
 </script>
 
