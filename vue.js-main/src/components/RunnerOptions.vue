@@ -1,65 +1,75 @@
 <template>
-    <div class="chart-row">
-        <RunOpts />
-        <div class="checks-form-container">
-            <h3 class="header">Test status</h3>
-            <div class="row">
-            </div>
-            <div class="col-element">
-                <p class="marge"><b>API</b> </p>
-                <pbar value=40 maximum=200 title="4654351" status=ongoing />
-                <pbar value=200 maximum=200 title="4623545" status=done />
-                <pbar value=40 maximum=200 title="6764351" status=failed />
-                <pbar value=40 maximum=200 title="87964351" status=ongoing />
-            </div>
-            <div class="col-element">
-                <p class="marge"><b>Chrome</b></p>
-                <pbar value=405 maximum=2000 title="4654351" status=ongoing />
-                <pbar value=2000 maximum=2000 title="4623545" status=done />
-                <pbar value=40 maximum=2000 title="6764351" status=failed />
-                <pbar value=200 maximum=2000 title="87964351" status=done />
-            </div>
-            <div class="col-element">
-                <p class="marge"><b>Firefox</b> </p>
-                <pbar value=0 maximum=2000 title="4654351" status=failed />
-                <pbar value=200 maximum=2000 title="4623545" status=ongoing />
-                <pbar value=40 maximum=2000 title="6764351" status=failed />
-                <pbar value=40 maximum=2000 title="87964351" status=ongoing />
-            </div>
 
-
-        </div>
-        <div class="inside-row">
-            <div class="radial-form-container">
-                <h3 class="header">Subprocesses</h3>
-                <radial_progress totalSteps="12" completedSteps="2" class="rad-marge" />
+    <div class="main-form-container">
+        <h3 class="header">Test options</h3>
+        <form autocomplete="on" class="form-aligner">
+            <div class="form-block">
+                <span class="span-aligner">
+                    hehehehe
+                </span>
+                <checkBox :option="'UI'" :checked="true" />
+                <checkBox :option="'API'" :checked="true" />
 
             </div>
-            <ErrorCounter />
-        </div>
+            <div class="form-block">
+                <span class="span-aligner">
+                    hehehehe
+                </span><input class="form-input" type="text">
+            </div>
+            <div class="form-block">
+                <span class="span-aligner">
+                    hehehehe
+                </span>
+                <radbtn :option="'optsia 0'" />
+                <radbtn :option="'optsia hz'" />
 
+            </div>
+            <div class="form-block">
+                <span class="span-aligner">
+                    hehehehe
+                </span>
+                <radbtn :option="'optsia 1'" />
+                <radbtn :option="'optsia 2'" />
+            </div>
+            <div class="form-block">
+                <span class="span-aligner">
+                    hehehehe
+                </span>
+                <checkBox :option="'Chrome'" :checked="true" />
+                <checkBox :option="'Firefox'" :checked="true" />
+            </div>
+            <div class="form-block">
+                <span class="span-aligner">
+                    hehehehe
+                </span>
 
+                <radbtn :option="'fbfhfrg'" />
+                <radbtn :option="'GIGA'" />
+            </div>
+
+            <div class="form-block">
+                <span class="span-aligner">
+                    hehehehe
+                </span><input class="form-input" type="text">
+            </div>
+            <button @click="checkboxCheck">Запуск</button>
+            <button @click="checkboxCheck">Стоп</button>
+        </form>
     </div>
 </template>
 
 <script>
-import radial_progress from "@/components/progress.vue";
-import pbar from '@/components/pbar.vue'
-import RunOpts from '@/components/RunnerOptions.vue'
-import ErrCounter from '@/components/errorCounter.vue'
+import radbtn from '@/components/radbtn.vue'
+import checkBox from '@/components/checkBox.vue'
 import { computed, defineComponent, ref, onMounted } from 'vue';
-import ErrorCounter from './errorCounter.vue';
 export default defineComponent({
     components: {
-        radial_progress,
-        pbar,
-        RunOpts,
-        ErrCounter,
-        ErrorCounter
+        radbtn, checkBox
     },
-    name: 'runform'
+    name: 'runneropts'
 
 })
+
 </script>
 
 <style scoped>
@@ -71,31 +81,12 @@ export default defineComponent({
     border-radius: 14px;
     padding: auto;
     margin-top: 25px;
-        margin-left: 15px;
-        margin-right: 15px;
-        margin-bottom: 25px;
-    position: relative;
-    height: 40%;
-    max-width: 30%;
-    box-shadow: 0px 0px 15px -5px rgb(0 0 0 / 30%);
-    flex: 1 1;
-    ;
-    transition: all 1s ease;
-}
-.radial-form-container {
-    border: 1px solid #fcfdfd;
-    background-color: #fcfdfd;
-    display: flex;
-    flex-direction: column;
-    border-radius: 14px;
-    padding: auto;
-    margin-top: 25px;
     margin-left: 15px;
     margin-right: 15px;
     margin-bottom: 25px;
     position: relative;
-    height: 45%;
-    max-width: 70%;
+    height: 40%;
+    max-width: 30%;
     box-shadow: 0px 0px 15px -5px rgb(0 0 0 / 30%);
     flex: 1 1;
     ;
@@ -106,13 +97,6 @@ export default defineComponent({
     flex: 1 1;
     display: flex;
     flex-direction: row;
-}
-.inside-row {
-    display: flex;
-    flex-direction: row;
-    flex: 1 0 auto;
-    justify-content: stretch;
-    max-width: 100%;
 }
 
 .col {
@@ -152,6 +136,7 @@ export default defineComponent({
     margin-left: 20px;
     /* margin-top: 10px */
 }
+
 .icon-checks {
     font-size: 4em;
     margin: auto
@@ -162,14 +147,31 @@ export default defineComponent({
 }
 
 .passed-i {
-                                    color: rgb(0, 34, 128)
-                                    }
-                                    
-                                    .failed-i {
-                                        color: red
-                                    }
-                                    
-                                
+    color: rgb(0, 34, 128)
+}
+
+.failed-i {
+    color: red
+}
+
+.main-form-container {
+    border: 1px solid #fcfdfd;
+    background-color: #fcfdfd;
+    display: flex;
+    flex-direction: column;
+    border-radius: 14px;
+    margin-top: 25px;
+    margin-left: 25px;
+    margin-right: 15px;
+    margin-bottom: 25px;
+    position: relative;
+    height: auto;
+    max-width: 20%;
+    box-shadow: 0px 0px 15px -5px rgb(0 0 0 / 30%);
+    flex: 1 1 0px;
+    ;
+    transition: all 1s ease;
+}
 
 .form-input {
     border: 1px solid #cccccc;
@@ -273,5 +275,9 @@ export default defineComponent({
 .form-block {
     margin: 15px;
 
+}
+
+.component-container {
+    max-width: 20%
 }
 </style>
