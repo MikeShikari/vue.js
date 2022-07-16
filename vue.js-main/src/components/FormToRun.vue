@@ -1,6 +1,16 @@
 <template>
     <div class="chart-row">
         <RunOpts />
+
+        <div class="inside-row">
+            <div class="radial-form-container">
+                <h3 class="header">Subprocesses</h3>
+                <radial_progress totalSteps="12" completedSteps="2" class="rad-marge" />
+
+            </div>
+            <ErrorCounter />
+        </div>
+
         <div class="checks-form-container">
             <h3 class="header">Test status</h3>
             <div class="row">
@@ -29,14 +39,7 @@
 
 
         </div>
-        <div class="inside-row">
-            <div class="radial-form-container">
-                <h3 class="header">Subprocesses</h3>
-                <radial_progress totalSteps="12" completedSteps="2" class="rad-marge" />
 
-            </div>
-            <ErrorCounter />
-        </div>
 
 
     </div>
