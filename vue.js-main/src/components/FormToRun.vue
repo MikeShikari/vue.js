@@ -1,15 +1,18 @@
 <template>
-    <div class="chart-row">
+    <div class="main-row">
         <RunOpts />
+        <div class="col">
+            <div class="inside-row">
+                <div class="radial-form-container">
+                    <h3 class="header">Subprocesses</h3>
+                    <radial_progress totalSteps="12" completedSteps="2" class="rad-marge" />
 
-        <div class="inside-row">
-            <div class="radial-form-container">
-                <h3 class="header">Subprocesses</h3>
-                <radial_progress totalSteps="12" completedSteps="2" class="rad-marge" />
-
+                </div>
+                <ErrorCounter />
             </div>
-            <ErrorCounter />
+            <Logger logValue="['rerere', 'ryryry']" />
         </div>
+
 
         <div class="checks-form-container">
             <h3 class="header">Test status</h3>
@@ -52,13 +55,15 @@ import RunOpts from '@/components/RunnerOptions.vue'
 import ErrCounter from '@/components/errorCounter.vue'
 import { computed, defineComponent, ref, onMounted } from 'vue';
 import ErrorCounter from './errorCounter.vue';
+import Logger from '@/components/Logger.vue'
 export default defineComponent({
     components: {
         radial_progress,
         pbar,
         RunOpts,
         ErrCounter,
-        ErrorCounter
+        ErrorCounter,
+        Logger
     },
     name: 'runform'
 
@@ -66,6 +71,14 @@ export default defineComponent({
 </script>
 
 <style scoped>
+.main-row {
+    display: flex;
+    flex-direction: row;
+    flex: 1 1 auto;
+    justify-content: stretch;
+    max-width: 98%;
+
+}
 .checks-form-container {
     border: 1px solid #fcfdfd;
     background-color: #fcfdfd;
@@ -97,7 +110,7 @@ export default defineComponent({
     margin-right: 15px;
     margin-bottom: 25px;
     position: relative;
-    height: 45%;
+    height: 95%;
     max-width: 70%;
     box-shadow: 0px 0px 15px -5px rgb(0 0 0 / 30%);
     flex: 1 1;
@@ -113,7 +126,7 @@ export default defineComponent({
 .inside-row {
     display: flex;
     flex-direction: row;
-    flex: 1 0 auto;
+    flex: 1 1 auto;
     justify-content: stretch;
     max-width: 100%;
 }

@@ -40,8 +40,8 @@ export default defineComponent({
     margin-right: 15px;
     margin-bottom: 25px;
     position: relative;
-    height: 45%;
-    max-width: 20%;
+    height: 95%;
+        max-width: 40%;
     box-shadow: 0px 0px 15px -5px rgb(0 0 0 / 30%);
     flex: 1 1;
     ;
