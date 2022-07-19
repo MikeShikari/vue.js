@@ -198,6 +198,22 @@ body {
     transition: all 0.5s ease;
     background: #e9e9e9
 }
+                ::-webkit-scrollbar {
+                    width: 7px;
+        
+                }
+        
+                /* Track */
+                ::-webkit-scrollbar-track {
+                    box-shadow: inset 0 0 5px grey;
+                    border-radius: 10px;
+                }
+        
+                /* Handle */
+                ::-webkit-scrollbar-thumb {
+                    background: rgb(98, 167, 245);
+                    border-radius: 5px;
+                }
 
 .menu-logo {
     width: 30px;

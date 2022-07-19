@@ -1,60 +1,60 @@
 <template>
 
     <div class="main-form-container">
-        <h3 class="header">Test options</h3>
+        <h3 class="header">Настройка тестирования</h3>
         <form autocomplete="on" class="form-aligner">
             <div class="form-block">
                 <span class="span-aligner">
-                    hehehehe
+                    Тип тестирования:
                 </span>
                 <checkBox :option="'UI'" :checked="true" />
                 <checkBox :option="'API'" :checked="true" />
 
             </div>
+
             <div class="form-block">
                 <span class="span-aligner">
-                    hehehehe
-                </span><input class="form-input" type="text">
-            </div>
-            <div class="form-block">
-                <span class="span-aligner">
-                    hehehehe
+                    Вписать результаты в статистику:
                 </span>
-                <radbtn :option="'optsia 0'" />
-                <radbtn :option="'optsia hz'" />
+                <radbtn :option="'Да'" :name="'stat_push'" />
+                <radbtn :option="'Нет'" :name="'stat_push'" />
 
             </div>
             <div class="form-block">
                 <span class="span-aligner">
-                    hehehehe
+                    Запустить тесты параллельно:
                 </span>
-                <radbtn :option="'optsia 1'" />
-                <radbtn :option="'optsia 2'" />
+                <radbtn :option="'Да'" :name="'parallel'" />
+                <radbtn :option="'Нет'" :name="'parallel'" />
             </div>
             <div class="form-block">
                 <span class="span-aligner">
-                    hehehehe
+                    Запустить тесты в браузере:
                 </span>
                 <checkBox :option="'Chrome'" :checked="true" />
                 <checkBox :option="'Firefox'" :checked="true" />
             </div>
             <div class="form-block">
                 <span class="span-aligner">
-                    hehehehe
+                    Предоставить отчет в формате PDF:
                 </span>
 
-                <radbtn :option="'fbfhfrg'" />
-                <radbtn :option="'GIGA'" />
+                <radbtn :option="'Да'" :name="'pdf'" />
+                <radbtn :option="'Нет'" :name="'pdf'" />
             </div>
 
             <div class="form-block">
                 <span class="span-aligner">
-                    hehehehe
+                    Версия isFront:
                 </span><input class="form-input" type="text">
             </div>
-            <button @click="checkboxCheck">Запуск</button>
-            <button @click="checkboxCheck">Стоп</button>
         </form>
+        <div>
+            <button @click="al" class="opt-btn strt">Запуск</button>
+            <button @click="checkboxCheck" class="opt-btn stop">Стоп</button>
+        </div>
+
+
     </div>
 </template>
 
@@ -66,13 +66,70 @@ export default defineComponent({
     components: {
         radbtn, checkBox
     },
-    name: 'runneropts'
+    name: 'runneropts',
+    methods: {
+        al: function () {
+            console.log(this.$parent.$refs.Logger.logV)
+        }
+    }
 
 })
 
 </script>
 
 <style scoped>
+.opt-btn {
+    width: 41.75%;
+    border-radius: 7px;
+    margin-left: 15px;
+    margin-bottom: 15px;
+    margin-right: 10px;
+    margin-top: 5px;
+    border: 3px;
+    display: inline-block;
+    padding: 5px;
+    font-size: large;
+
+
+}
+
+.strt {
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+    border: 2px solid #44b89f;
+    /* border-color: rgb(247 234 100 / 80%); */
+    background-color: #44b89f;
+}
+
+.strt:hover {
+    box-shadow: 0px 0px 15px -5px #44b89f;
+    transition: all 0.5s ease;
+}
+
+.strt:active {
+    background-color: #296d5e;
+    transition: all 0.5s ease;
+    ;
+}
+
+.stop {
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+    border: 2px solid #f47862;
+    /* border-color: rgb(247 234 100 / 80%); */
+    background-color: #f47862;
+}
+
+.stop:hover {
+    box-shadow: 0px 0px 15px -5px #f47862;
+    transition: all 0.5s ease;
+}
+
+.stop:active {
+    background-color: #773b31;
+    transition: all 0.5s ease;
+    ;
+}
 .checks-form-container {
     border: 1px solid #fcfdfd;
     background-color: #fcfdfd;

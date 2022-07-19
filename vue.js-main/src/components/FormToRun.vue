@@ -4,20 +4,19 @@
         <div class="col">
             <div class="inside-row">
                 <div class="radial-form-container">
-                    <h3 class="header">Subprocesses</h3>
+                    <h3 class="header">Субпроцессы</h3>
                     <radial_progress totalSteps="12" completedSteps="2" class="rad-marge" />
 
                 </div>
-                <ErrorCounter />
+                <ErrorCounter loading="ongoing" />
             </div>
-            <Logger logValue="['rerere', 'ryryry']" />
+            <Logger ref=Logger :logValue="this.biba" />
         </div>
 
 
         <div class="checks-form-container">
-            <h3 class="header">Test status</h3>
-            <div class="row">
-            </div>
+            <h3 class="header">Статусы тестов</h3>
+
             <div class="col-element">
                 <p class="marge"><b>API</b> </p>
                 <pbar value=40 maximum=200 title="4654351" status=ongoing />
@@ -65,7 +64,20 @@ export default defineComponent({
         ErrorCounter,
         Logger
     },
-    name: 'runform'
+    name: 'runform',
+    data() {
+        return {
+            biba: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut fringilla sollicitudin ornare. Maecenas non augue non augue convallis sagittis id a nisl. In sapien massa, finibus quis purus id, ullamcorper vehicula diam. Etiam mi est, cursus a ex quis, pulvinar mollis metus. Donec porttitor tristique nulla vitae posuere. Vestibulum velit leo, facilisis nec quam vitae, tempor imperdiet magna. Praesent et tempor erat. Nulla facilisi. In ligula sapien, aliquam vel erat non, fringilla aliquam ipsum. Donec quis laoreet nisi, ac fringilla justo. Quisque eget sollicitudin tellus, vitae malesuada justo. Maecenas congue suscipit nibh quis sagittis. Nullam facilisis, orci in accumsan gravida, odio est fermentum mi, in venenatis est erat ac mauris. Donec at luctus sem, sed porttitor sem. Donec faucibus mauris nec nisi scelerisque, non consequat quam imperdiet.\
+\
+Aliquam eu quam nulla. Sed pharetra finibus felis mattis gravida. Aenean vestibulum tellus vel efficitur auctor. Vestibulum cursus, nulla in congue lobortis, diam augue fermentum massa, ut aliquam nisi ligula at eros. Ut justo orci, pretium id dictum mattis, fringilla sit amet mauris. Morbi vel erat bibendum, finibus ipsum tincidunt, condimentum nibh. Nam nec lectus dignissim, accumsan justo at, vestibulum augue. Aliquam metus nulla, aliquam et eros id, bibendum condimentum velit. Maecenas eget rhoncus dui. Aenean euismod nunc ligula, in euismod magna scelerisque vitae. Cras lacinia magna vel felis molestie, eget condimentum dolor gravida. \
+\
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut fringilla sollicitudin ornare. Maecenas non augue non augue convallis sagittis id a nisl. In sapien massa, finibus quis purus id, ullamcorper vehicula diam. Etiam mi est, cursus a ex quis, pulvinar mollis metus. Donec porttitor tristique nulla vitae posuere. Vestibulum velit leo, facilisis nec quam vitae, tempor imperdiet magna. Praesent et tempor erat. Nulla facilisi. In ligula sapien, aliquam vel erat non, fringilla aliquam ipsum. Donec quis laoreet nisi, ac fringilla justo. Quisque eget sollicitudin tellus, vitae malesuada justo. Maecenas congue suscipit nibh quis sagittis. Nullam facilisis, orci in accumsan gravida, odio est fermentum mi, in venenatis est erat ac mauris. Donec at luctus sem, sed porttitor sem. Donec faucibus mauris nec nisi scelerisque, non consequat quam imperdiet.\
+\
+Aliquam eu quam nulla. Sed pharetra finibus felis mattis gravida. Aenean vestibulum tellus vel efficitur auctor. Vestibulum cursus, nulla in congue lobortis, diam augue fermentum massa, ut aliquam nisi ligula at eros. Ut justo orci, pretium id dictum mattis, fringilla sit amet mauris. Morbi vel erat bibendum, finibus ipsum tincidunt, condimentum nibh. Nam nec lectus dignissim, accumsan justo at, vestibulum augue. Aliquam metus nulla, aliquam et eros id, bibendum condimentum velit. Maecenas eget rhoncus dui. Aenean euismod nunc ligula, in euismod magna scelerisque vitae. Cras lacinia magna vel felis molestie, eget condimentum dolor gravida. \
+\
+Etiam tristique luctus ante non tincidunt. Morbi vitae tortor sit amet turpis egestas cursus. Cras hendrerit nisl lectus, ac tempor nunc sagittis et. Maecenas vel ultricies ante. Aenean vitae sapien at risus semper egestas non eget dolor. Proin et felis quis risus pellentesque accumsan nec ut sem. Nulla euismod dignissim dui eu scelerisque. Integer mi odio, fermentum cursus eros nec, convallis aliquet mauris. Nam nec justo ut justo tristique condimentum eu vel lectus."
+        }
+    }
 
 })
 </script>
@@ -89,15 +101,17 @@ export default defineComponent({
     margin-top: 25px;
         margin-left: 15px;
         margin-right: 15px;
+        justify-content: stretch;
         margin-bottom: 25px;
     position: relative;
-    height: 40%;
+    max-height: 100%;
     max-width: 30%;
     box-shadow: 0px 0px 15px -5px rgb(0 0 0 / 30%);
     flex: 1 1;
     ;
     transition: all 1s ease;
 }
+
 .radial-form-container {
     border: 1px solid #fcfdfd;
     background-color: #fcfdfd;
@@ -129,6 +143,7 @@ export default defineComponent({
     flex: 1 1 auto;
     justify-content: stretch;
     max-width: 100%;
+    height: 10%
 }
 
 .col {

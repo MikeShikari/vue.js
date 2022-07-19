@@ -119,7 +119,7 @@ export default {
 .chart-row {
     display: flex;
     flex-direction: row;
-    flex: 0 0 auto;
+    flex: 1 1 auto;
     justify-content: stretch;
     max-width: 98%;
 

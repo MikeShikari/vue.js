@@ -1,6 +1,6 @@
 <template>
     <div>
-        <label class="checkbox-aligner" :option="this.opt"><input name="radbtn" type="radio"><span
+        <label class="checkbox-aligner" :option="this.opt"><input :name="this.grp" type="radio"><span
                 class="checkcust rdb"></span>
             {{ option }}</label>
     </div>
@@ -13,11 +13,15 @@ export default defineComponent({
     props: {
         option: {
             type: String
+        },
+        group: {
+            type: String
         }
     },
     setup(props) {
         const opt = ref(props.option)
-        return { opt }
+        const grp = ref(props.group)
+        return { opt, grp }
     }
 })
 </script>

@@ -5,8 +5,8 @@
             <select name="test-runs" id="test-runs" v-model="selected" class="option-picker">
                 <option v-for="(val, index) in values"
                     v-bind:value='{ date: val.date, version: val.version, tests: val.tests }' class="option-list"> {{
-                            val.date
-                    }}, {{ val.version }}</option>
+                    val.date
+                    }}, {{ val.version }}, {{index}}</option>
             </select>
             <p class="info_text">Date: <span class="info_text_p">{{ this.selected.date }}</span></p>
             <p class="info_text">Version: <span class="info_text_p">{{ this.selected.version }}</span></p>
