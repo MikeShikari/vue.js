@@ -103,9 +103,9 @@ export default {
 
 
                 {
-                    link: 'settings',
-                    name: 'Setting',
-                    tooltip: 'Setting',
+                    link: 'configs',
+                    name: 'Configs',
+                    tooltip: 'Configs',
                     icon: 'bx-cog',
                 },
             ],

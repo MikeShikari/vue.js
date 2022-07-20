@@ -3,7 +3,7 @@
     <Sidebar />
     <div class="chart-col">
         <div class="chart-row">
-            <Line title='Errors' v-bind:results='resARRAY' :legend='catarr' />
+            <Line ref="Line" title='Errors' v-bind:results='resARRAY' :legend='catarr' />
         </div>
         <div class="chart-row">
             <Runs :vals='runs' />
@@ -28,11 +28,11 @@
 
 <script>
 import Sidebar from '@/components/sidebar.vue'
-import Chart from '@/components/ChartDiv.vue'
-import Line from '@/components/LineChart.vue'
-import Runs from '@/components/ReportsNVersion.vue'
-import Bar from '@/components/BarChart.vue'
-import TLine from '@/components/TimeLineChart.vue'
+import Chart from '@/components/dashboard/ChartDiv.vue'
+import Line from '@/components/dashboard/LineChart.vue'
+import Runs from '@/components/dashboard/ReportsNVersion.vue'
+import Bar from '@/components/dashboard/BarChart.vue'
+import TLine from '@/components/dashboard/TimeLineChart.vue'
 export default {
     name: 'component.vue',
     components: { Sidebar, Chart, Line, Runs, Bar, TLine },
@@ -105,6 +105,9 @@ export default {
 
 
         }
+    },
+    mounted() {
+        console.log(this.Line.$refs)
     },
     methods: {
         bebra: function () {

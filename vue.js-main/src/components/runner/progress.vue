@@ -18,7 +18,6 @@
 <script>
 import RadialProgressBar from "vue3-radial-progress";
 import { ref, defineComponent } from "vue";
-import { number } from "echarts/core";
 export default {
     components: {
         RadialProgressBar

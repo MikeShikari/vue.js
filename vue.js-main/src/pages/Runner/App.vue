@@ -11,8 +11,8 @@
 
 <script>
 import Sidebar from '@/components/sidebar.vue'
-import RunForm from '@/components/FormToRun.vue'
-import radial_progress from '@/components/progress.vue'
+import RunForm from '@/components/runner/FormToRun.vue'
+import radial_progress from '@/components/runner/progress.vue'
 
 export default {
     name: 'component.vue',
@@ -21,6 +21,9 @@ export default {
 </script>
 
 <style>
+body {
+    color: #666666;
+}
 .chart-row {
     display: flex;
     flex-direction: row;

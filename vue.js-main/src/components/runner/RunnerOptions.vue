@@ -59,8 +59,8 @@
 </template>
 
 <script>
-import radbtn from '@/components/radbtn.vue'
-import checkBox from '@/components/checkBox.vue'
+import radbtn from '@/components/runner/radbtn.vue'
+import checkBox from '@/components/runner/checkBox.vue'
 import { computed, defineComponent, ref, onMounted } from 'vue';
 export default defineComponent({
     components: {
@@ -130,6 +130,7 @@ export default defineComponent({
     transition: all 0.5s ease;
     ;
 }
+
 .checks-form-container {
     border: 1px solid #fcfdfd;
     background-color: #fcfdfd;

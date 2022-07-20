@@ -14,5 +14,11 @@ module.exports = defineConfig({
       title: "Test Runner",
       chunks: ["chunk-vendors", "chunk-common", "test_runner"],
     },
+    configs: {
+      entry: "./src/pages/Configs/main.js",
+      template: "public/index.html",
+      title: "Configs",
+      chunks: ["chunk-vendors", "chunk-common", "configs"],
+    },
   },
 });

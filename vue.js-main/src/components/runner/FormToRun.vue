@@ -48,13 +48,13 @@
 </template>
 
 <script>
-import radial_progress from "@/components/progress.vue";
-import pbar from '@/components/pbar.vue'
-import RunOpts from '@/components/RunnerOptions.vue'
-import ErrCounter from '@/components/errorCounter.vue'
+import radial_progress from "@/components/runner/progress.vue";
+import pbar from '@/components/runner/pbar.vue'
+import RunOpts from '@/components/runner/RunnerOptions.vue'
+import ErrCounter from '@/components/runner/errorCounter.vue'
 import { computed, defineComponent, ref, onMounted } from 'vue';
-import ErrorCounter from './errorCounter.vue';
-import Logger from '@/components/Logger.vue'
+import ErrorCounter from '@/components/runner/errorCounter.vue';
+import Logger from '@/components/runner/Logger.vue'
 export default defineComponent({
     components: {
         radial_progress,
@@ -91,6 +91,7 @@ Etiam tristique luctus ante non tincidunt. Morbi vitae tortor sit amet turpis eg
     max-width: 98%;
 
 }
+
 .checks-form-container {
     border: 1px solid #fcfdfd;
     background-color: #fcfdfd;
@@ -99,10 +100,10 @@ Etiam tristique luctus ante non tincidunt. Morbi vitae tortor sit amet turpis eg
     border-radius: 14px;
     padding: auto;
     margin-top: 25px;
-        margin-left: 15px;
-        margin-right: 15px;
-        justify-content: stretch;
-        margin-bottom: 25px;
+    margin-left: 15px;
+    margin-right: 15px;
+    justify-content: stretch;
+    margin-bottom: 25px;
     position: relative;
     max-height: 100%;
     max-width: 30%;
@@ -137,6 +138,7 @@ Etiam tristique luctus ante non tincidunt. Morbi vitae tortor sit amet turpis eg
     display: flex;
     flex-direction: row;
 }
+
 .inside-row {
     display: flex;
     flex-direction: row;
@@ -183,6 +185,7 @@ Etiam tristique luctus ante non tincidunt. Morbi vitae tortor sit amet turpis eg
     margin-left: 20px;
     /* margin-top: 10px */
 }
+
 .icon-checks {
     font-size: 4em;
     margin: auto
@@ -193,14 +196,14 @@ Etiam tristique luctus ante non tincidunt. Morbi vitae tortor sit amet turpis eg
 }
 
 .passed-i {
-                                    color: rgb(0, 34, 128)
-                                    }
-                                    
-                                    .failed-i {
-                                        color: red
-                                    }
-                                    
-                                
+    color: rgb(0, 34, 128)
+}
+
+.failed-i {
+    color: red
+}
+
+
 
 .form-input {
     border: 1px solid #cccccc;
