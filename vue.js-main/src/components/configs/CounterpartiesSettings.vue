@@ -1,7 +1,7 @@
 <template>
 
     <div class="main-form-container">
-        <h3 class="header">Настройка подключения к базе данных</h3>
+        <h3 class="header">Настройка контрагентов</h3>
         <form autocomplete="on" class="form-aligner">
 
 
@@ -14,11 +14,11 @@
                 <span class="span-aligner">
                     Использовать несколько БИКов:
                 </span>
-                <radbtn :option="'Да'" :name="'multi-bic'" />
-                <radbtn :option="'Нет'" :name="'multi-bic'" />
+                <radbtn :option="'Да'" :group="'multi-bic'" />
+                <radbtn :option="'Нет'" :group="'multi-bic'" />
 
             </div>
-            <div class="form-block">
+            <div class="form-block last-el">
                 <span class="span-aligner">
                     Введите БИК банка / банков для контрагентов:
                 </span><input class="form-input" type="text">
@@ -68,6 +68,9 @@ export default defineComponent({
     margin-left: 10px;
     font-size: 35px;
     color: #f47862
+}
+.last-el {
+    margin-bottom: 30px !important
 }
 
 .opt-btn {
@@ -124,7 +127,8 @@ export default defineComponent({
     display: flex;
     flex-direction: column;
     border-radius: 14px;
-    margin-top: 25px;
+    margin-top: 7px;
+        align-items: center;
     margin-left: 25px;
     margin-right: 15px;
     margin-bottom: 25px;

@@ -1,7 +1,7 @@
 <template>
 
     <div class="main-form-container">
-        <h3 class="header">Настройка подключения к базе данных</h3>
+        <h3 class="header">Общие настройки</h3>
         <form autocomplete="on" class="form-aligner">
 
 
@@ -14,11 +14,11 @@
                 <span class="span-aligner">
                     Использовать клиента-получателя из базы данных:
                 </span>
-                <radbtn :option="'Да'" :name="'custom_payee'" />
-                <radbtn :option="'Нет'" :name="'custom_payee'" />
+                <radbtn :option="'Да'" :group="'custom_payee'" />
+                <radbtn :option="'Нет'" :group="'custom_payee'" />
 
             </div>
-            <div class="form-block">
+            <div class="form-block last-el">
                 <span class="span-aligner">
                     Введите id клиента, используемого в качестве получателя:
                 </span><input class="form-input" type="text">
@@ -67,7 +67,9 @@ export default defineComponent({
     font-size: 35px;
     color: #f47862
 }
-
+.last-el {
+    margin-bottom: 30px !important
+}
 .opt-btn {
     width: 60%;
     border-radius: 7px;
@@ -122,9 +124,10 @@ export default defineComponent({
     display: flex;
     flex-direction: column;
     border-radius: 14px;
-    margin-top: 25px;
+    margin-top: 7px;
     margin-left: 25px;
     margin-right: 15px;
+    align-items: center;
     margin-bottom: 25px;
     position: relative;
     height: auto;

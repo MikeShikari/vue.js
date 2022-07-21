@@ -1,39 +1,30 @@
 <template>
 
     <div class="main-form-container">
-        <h3 class="header">Настройка подключения к базе данных</h3>
+        <h3 class="header">Настройка клиентов</h3>
         <form autocomplete="on" class="form-aligner">
 
+            <div class="form-block">
+                <span class="span-aligner">
+                    Использовать клиента-получателя из базы данных:
+                </span>
+                <radbtn :option="'Да'" :group="'custom_payee'" />
+                <radbtn :option="'Нет'" :group="'custom_payee'" />
 
-            <div class="form-block">
-                <span class="span-aligner">
-                    Хост:
-                </span><input class="form-input" type="text">
             </div>
             <div class="form-block">
                 <span class="span-aligner">
-                    Порт:
+                    Введите URL:
                 </span><input class="form-input" type="text">
             </div>
-            <div class="form-block">
-                <span class="span-aligner">
-                    Логин:
-                </span><input class="form-input" type="text">
-            </div>
-            <div class="form-block">
-                <span class="span-aligner">
-                    Пароль:
-                </span><input class="form-input" type="text">
-            </div>
+
             <div class="form-block last-el">
                 <span class="span-aligner">
-                    Название базы данных:
+                    Введите id клиента, используемого в качестве получателя:
                 </span><input class="form-input" type="text">
             </div>
+
         </form>
-
-
-
     </div>
 </template>
 
@@ -69,9 +60,7 @@ export default defineComponent({
     font-size: 35px;
     color: #44b89f
 }
-.last-el {
-    margin-bottom: 30px !important
-}
+
 .ic-err {
     margin-top: 5px;
     margin-left: 10px;
@@ -92,6 +81,10 @@ export default defineComponent({
     font-size: large;
 
 
+}
+
+.last-el {
+    margin-bottom: 30px !important
 }
 
 .strt {
@@ -116,7 +109,7 @@ export default defineComponent({
 
 
 .row {
-    flex: 0 0 auto;
+    flex: 1 1;
     display: flex;
     flex-direction: row;
 }
@@ -133,10 +126,10 @@ export default defineComponent({
     display: flex;
     flex-direction: column;
     border-radius: 14px;
-    margin-top: 25px;
+    margin-top: 7px;
     margin-left: 25px;
-    margin-right: 15px;
     align-items: center;
+    margin-right: 15px;
     margin-bottom: 25px;
     position: relative;
     height: auto;

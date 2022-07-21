@@ -16,16 +16,16 @@
                 <span class="span-aligner">
                     Вписать результаты в статистику:
                 </span>
-                <radbtn :option="'Да'" :name="'stat_push'" />
-                <radbtn :option="'Нет'" :name="'stat_push'" />
+                <radbtn :option="'Да'" :group="'stat_push'" />
+                <radbtn :option="'Нет'" :group="'stat_push'" />
 
             </div>
             <div class="form-block">
                 <span class="span-aligner">
                     Запустить тесты параллельно:
                 </span>
-                <radbtn :option="'Да'" :name="'parallel'" />
-                <radbtn :option="'Нет'" :name="'parallel'" />
+                <radbtn :option="'Да'" :group="'parallel'" />
+                <radbtn :option="'Нет'" :group="'parallel'" />
             </div>
             <div class="form-block">
                 <span class="span-aligner">
@@ -39,8 +39,8 @@
                     Предоставить отчет в формате PDF:
                 </span>
 
-                <radbtn :option="'Да'" :name="'pdf'" />
-                <radbtn :option="'Нет'" :name="'pdf'" />
+                <radbtn :option="'Да'" :group="'pdf'" />
+                <radbtn :option="'Нет'" :group="'pdf'" />
             </div>
 
             <div class="form-block">
